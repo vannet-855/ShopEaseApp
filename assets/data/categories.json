@@ -1,0 +1,10 @@
+[
+  { "id": "all",         "name": "All",         "emoji": "🛍️", "colorHex": "5C35E5" },
+  { "id": "electronics", "name": "Electronics", "emoji": "📱", "colorHex": "3B82F6" },
+  { "id": "shoes",       "name": "Shoes",       "emoji": "👟", "colorHex": "EF4444" },
+  { "id": "fashion",     "name": "Fashion",     "emoji": "👗", "colorHex": "EC4899" },
+  { "id": "bags",        "name": "Bags",        "emoji": "👜", "colorHex": "F59E0B" },
+  { "id": "accessories", "name": "Accessories", "emoji": "⌚", "colorHex": "10B981" },
+  { "id": "sports",      "name": "Sports",      "emoji": "⚽", "colorHex": "8B5CF6" },
+  { "id": "beauty",      "name": "Beauty",      "emoji": "💄", "colorHex": "F97316" }
+]

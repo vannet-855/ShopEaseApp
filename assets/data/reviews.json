@@ -1,0 +1,62 @@
+[
+  {
+    "id": "r1",
+    "productId": "p1",
+    "userId": "u1",
+    "userName": "Alex Johnson",
+    "userAvatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    "rating": 5,
+    "comment": "Absolutely love these shoes! Super comfortable and the air cushioning is amazing. Wore them all day without any discomfort. Great purchase!",
+    "images": [],
+    "helpful": 42,
+    "createdAt": "2026-10-01T10:30:00Z"
+  },
+  {
+    "id": "r2",
+    "productId": "p1",
+    "userId": "u2",
+    "userName": "Sarah Chen",
+    "userAvatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+    "rating": 4,
+    "comment": "Great shoes overall. The fit is true to size and the build quality is excellent. Knocked off one star because they took a while to break in.",
+    "images": [],
+    "helpful": 18,
+    "createdAt": "2026-09-25T14:20:00Z"
+  },
+  {
+    "id": "r3",
+    "productId": "p2",
+    "userId": "u3",
+    "userName": "Marcus Williams",
+    "userAvatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
+    "rating": 5,
+    "comment": "Best headphones I've ever owned. The noise cancellation is incredible — I can't hear anything in a busy office. Sound quality is pristine.",
+    "images": [],
+    "helpful": 87,
+    "createdAt": "2026-10-05T08:15:00Z"
+  },
+  {
+    "id": "r4",
+    "productId": "p3",
+    "userId": "u1",
+    "userName": "Alex Johnson",
+    "userAvatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    "rating": 5,
+    "comment": "The new display is gorgeous and the health tracking features are incredibly accurate. Battery life improved significantly over previous generations.",
+    "images": [],
+    "helpful": 34,
+    "createdAt": "2026-09-18T16:45:00Z"
+  },
+  {
+    "id": "r5",
+    "productId": "p8",
+    "userId": "u2",
+    "userName": "Sarah Chen",
+    "userAvatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+    "rating": 5,
+    "comment": "These running shoes are incredible. The Boost cushioning makes every run feel effortless. I've done several half marathons in them. Highly recommend!",
+    "images": [],
+    "helpful": 56,
+    "createdAt": "2026-10-10T11:00:00Z"
+  }
+]

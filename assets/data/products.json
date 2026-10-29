@@ -1,0 +1,257 @@
+[
+  {
+    "id": "p1",
+    "title": "Nike Air Max 270",
+    "description": "The Nike Air Max 270 delivers an exceptional cushioning experience with its large Air unit. Perfect for everyday wear with a bold silhouette and breathable mesh upper.",
+    "price": 89.99,
+    "originalPrice": 120.00,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=800&q=80",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80"
+    ],
+    "categoryId": "shoes",
+    "brand": "Nike",
+    "rating": 4.7,
+    "reviewCount": 1243,
+    "stock": 42,
+    "isFeatured": true,
+    "isActive": true,
+    "tags": ["trending", "sport"],
+    "sizes": ["7", "8", "9", "10", "11"],
+    "colors": ["Black", "White", "Red"]
+  },
+  {
+    "id": "p2",
+    "title": "Sony WH-1000XM5",
+    "description": "Industry-leading noise cancellation meets stunning sound quality. Up to 30-hour battery life with quick charge technology. Multipoint connectivity for two devices simultaneously.",
+    "price": 279.99,
+    "originalPrice": 349.99,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80"
+    ],
+    "categoryId": "electronics",
+    "brand": "Sony",
+    "rating": 4.9,
+    "reviewCount": 3021,
+    "stock": 18,
+    "isFeatured": true,
+    "isActive": true,
+    "tags": ["bestseller", "tech"],
+    "sizes": [],
+    "colors": ["Black", "Silver"]
+  },
+  {
+    "id": "p3",
+    "title": "Apple Watch Series 10",
+    "description": "The thinnest Apple Watch ever, with a larger display and advanced health sensors for comprehensive wellness tracking. Track workouts, sleep, heart rate, and more.",
+    "price": 399.00,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80"
+    ],
+    "categoryId": "electronics",
+    "brand": "Apple",
+    "rating": 4.8,
+    "reviewCount": 876,
+    "stock": 9,
+    "isFeatured": true,
+    "isActive": true,
+    "tags": ["new", "tech"],
+    "sizes": ["41mm", "45mm"],
+    "colors": ["Midnight", "Starlight", "Product Red"]
+  },
+  {
+    "id": "p4",
+    "title": "Levi's 501 Original Jeans",
+    "description": "The original straight fit jeans that started it all. Made from durable denim with the iconic button-fly closure. A timeless classic that never goes out of style.",
+    "price": 59.99,
+    "originalPrice": 79.99,
+    "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80"
+    ],
+    "categoryId": "fashion",
+    "brand": "Levi's",
+    "rating": 4.5,
+    "reviewCount": 4512,
+    "stock": 67,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["classic"],
+    "sizes": ["28", "30", "32", "34", "36"],
+    "colors": ["Blue", "Black", "Dark Wash"]
+  },
+  {
+    "id": "p5",
+    "title": "Minimalist Backpack",
+    "description": "A sleek, water-resistant backpack with a 20L capacity. Perfect for commuting, travel, or daily adventures. Features a padded laptop compartment and ergonomic straps.",
+    "price": 69.00,
+    "originalPrice": 89.00,
+    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
+    ],
+    "categoryId": "bags",
+    "brand": "Everest",
+    "rating": 4.6,
+    "reviewCount": 782,
+    "stock": 23,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["trending"],
+    "sizes": [],
+    "colors": ["Black", "Navy", "Grey"]
+  },
+  {
+    "id": "p6",
+    "title": "Ray-Ban Aviator Classic",
+    "description": "The original aviator sunglasses with iconic metal frames and premium lenses. Timeless style for every face shape. UV400 protection with polarized lens option.",
+    "price": 149.00,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80"
+    ],
+    "categoryId": "accessories",
+    "brand": "Ray-Ban",
+    "rating": 4.7,
+    "reviewCount": 2145,
+    "stock": 34,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["classic", "style"],
+    "sizes": [],
+    "colors": ["Gold/Green", "Silver/Blue", "Rose Gold"]
+  },
+  {
+    "id": "p7",
+    "title": "Xiaomi Smart Band 9",
+    "description": "Lightweight fitness tracker with 14-day battery, AMOLED display, heart rate monitoring and 150+ workout modes. Water resistant up to 5ATM.",
+    "price": 39.99,
+    "originalPrice": 49.99,
+    "imageUrl": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&q=80"
+    ],
+    "categoryId": "electronics",
+    "brand": "Xiaomi",
+    "rating": 4.4,
+    "reviewCount": 6234,
+    "stock": 89,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["budget", "fitness"],
+    "sizes": [],
+    "colors": ["Black", "Blue", "Pink"]
+  },
+  {
+    "id": "p8",
+    "title": "Adidas Ultraboost 24",
+    "description": "Experience incredible energy return with full-length Boost cushioning and a Primeknit+ upper for adaptive comfort. Ideal for running and everyday wear.",
+    "price": 179.99,
+    "originalPrice": 210.00,
+    "imageUrl": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&q=80"
+    ],
+    "categoryId": "shoes",
+    "brand": "Adidas",
+    "rating": 4.8,
+    "reviewCount": 1987,
+    "stock": 15,
+    "isFeatured": true,
+    "isActive": true,
+    "tags": ["sport", "running"],
+    "sizes": ["7", "8", "9", "10", "11", "12"],
+    "colors": ["White/Black", "Core Black", "Blue Rush"]
+  },
+  {
+    "id": "p9",
+    "title": "Leather Tote Bag",
+    "description": "Premium genuine leather tote with spacious interior and magnetic clasp closure. Perfect for work, shopping, or weekend outings. Includes interior zip pocket.",
+    "price": 119.00,
+    "originalPrice": 159.00,
+    "imageUrl": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80"
+    ],
+    "categoryId": "bags",
+    "brand": "Coach",
+    "rating": 4.6,
+    "reviewCount": 543,
+    "stock": 12,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["luxury", "style"],
+    "sizes": [],
+    "colors": ["Tan", "Black", "Burgundy"]
+  },
+  {
+    "id": "p10",
+    "title": "Wireless Gaming Keyboard",
+    "description": "Compact 75% mechanical keyboard with RGB backlight, hot-swappable switches, and 2.4GHz wireless connectivity. 80-hour battery life per charge.",
+    "price": 129.99,
+    "originalPrice": 159.99,
+    "imageUrl": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=800&q=80"
+    ],
+    "categoryId": "electronics",
+    "brand": "Keychron",
+    "rating": 4.7,
+    "reviewCount": 892,
+    "stock": 30,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["gaming", "tech"],
+    "sizes": [],
+    "colors": ["Black", "White", "Carbon Grey"]
+  },
+  {
+    "id": "p11",
+    "title": "Yoga Mat Pro",
+    "description": "6mm thick non-slip yoga mat with alignment lines and carry strap. Made from eco-friendly TPE material. Perfect for yoga, pilates, and floor workouts.",
+    "price": 45.00,
+    "originalPrice": 60.00,
+    "imageUrl": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=800&q=80"
+    ],
+    "categoryId": "sports",
+    "brand": "Manduka",
+    "rating": 4.5,
+    "reviewCount": 1123,
+    "stock": 55,
+    "isFeatured": false,
+    "isActive": true,
+    "tags": ["fitness", "wellness"],
+    "sizes": [],
+    "colors": ["Purple", "Teal", "Black", "Pink"]
+  },
+  {
+    "id": "p12",
+    "title": "Matte Lip Collection Set",
+    "description": "Set of 6 long-lasting matte liquid lipsticks in versatile shades. Hydrating formula that lasts up to 16 hours. Cruelty-free and vegan certified.",
+    "price": 34.99,
+    "originalPrice": 49.99,
+    "imageUrl": "https://images.unsplash.com/photo-1586495777744-4e6232bf2919?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2919?w=800&q=80"
+    ],
+    "categoryId": "beauty",
+    "brand": "NARS",
+    "rating": 4.6,
+    "reviewCount": 2340,
+    "stock": 78,
+    "isFeatured": true,
+    "isActive": true,
+    "tags": ["beauty", "trending"],
+    "sizes": [],
+    "colors": ["Set of 6"]
+  }
+]
