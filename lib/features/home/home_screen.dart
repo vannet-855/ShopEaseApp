@@ -9,6 +9,7 @@ import '../../core/animations/shimmer_loading.dart';
 import '../../core/mock/models/banner_model.dart';
 import '../../core/providers/product_provider.dart';
 import '../../core/providers/home_provider.dart';
+import '../../core/providers/user_provider.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../core/widgets/app_icon.dart';
@@ -17,8 +18,17 @@ import '../../core/widgets/product_card.dart';
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
+  /// Returns a time-of-day greeting string.
+  String _greeting() {
+    final hour = DateTime.now().hour;
+    if (hour < 12) return 'Good morning';
+    if (hour < 17) return 'Good afternoon';
+    return 'Good evening';
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider);
     final unreadCount = ref.watch(unreadNotificationCountProvider);
     final selectedCat = ref.watch(selectedCategoryProvider);
     final bannersAsync = ref.watch(bannersProvider);
@@ -30,7 +40,7 @@ class HomeScreen extends ConsumerWidget {
       backgroundColor: AppColors.background,
       body: CustomScrollView(
         slivers: [
-          // ── App Bar ──────────────────────────────────────────────────────
+          // ── App Bar with user greeting ────────────────────────────────────
           SliverAppBar(
             floating: true,
             snap: true,
@@ -39,67 +49,92 @@ class HomeScreen extends ConsumerWidget {
             elevation: 0,
             scrolledUnderElevation: 1,
             shadowColor: AppColors.border,
+            toolbarHeight: 64,
             titleSpacing: 16,
-            title: Row(
-              children: [
-                Container(
-                  width: 36,
-                  height: 36,
-                  decoration: BoxDecoration(
-                    gradient: AppColors.primaryGradient,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  alignment: Alignment.center,
-                  child: const AppIcon(
-                    AppIcons.shoppingBag,
-                    color: Colors.white,
-                    size: 20,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Text('ShopEase', style: AppTextStyles.h3),
-              ],
-            ),
-            actions: [
-              // Notification
-              IconButton(
-                onPressed: () => context.push('/notifications'),
-                icon: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    const AppIcon(
-                      AppIcons.bell,
-                      size: 22,
-                      color: AppColors.textPrimary,
-                    ),
-                    if (unreadCount > 0)
-                      Positioned(
-                        top: -2,
-                        right: -2,
-                        child: Container(
-                          width: unreadCount > 9 ? 16 : 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                            color: AppColors.accent,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          alignment: Alignment.center,
-                          child: unreadCount > 9
-                              ? const Text(
-                                  '9+',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 7,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                )
-                              : null,
+            title: BouncingTap(
+              onTap: () => context.go('/profile'),
+              scaleFactor: 0.96,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // ── Avatar ────────────────────────────────────────────────
+                  _UserAvatar(avatarUrl: user.avatarUrl, initials: user.initials),
+                  const SizedBox(width: 12),
+                  // ── Greeting + Name ───────────────────────────────────────
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        _greeting(),
+                        style: AppTextStyles.bodySmall.copyWith(
+                          color: AppColors.textSecondary,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                  ],
+                      Text(
+                        user.name,
+                        style: AppTextStyles.h3.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.textPrimary,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            actions: [
+              // Notification bell with badge
+              BouncingTap(
+                onTap: () => context.push('/notifications'),
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: AppColors.background,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: AppColors.border),
+                  ),
+                  alignment: Alignment.center,
+                  child: Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      const AppIcon(
+                        AppIcons.bell,
+                        size: 20,
+                        color: AppColors.textPrimary,
+                      ),
+                      if (unreadCount > 0)
+                        Positioned(
+                          top: -3,
+                          right: -3,
+                          child: Container(
+                            constraints: const BoxConstraints(minWidth: 14),
+                            height: 14,
+                            padding: const EdgeInsets.symmetric(horizontal: 3),
+                            decoration: BoxDecoration(
+                              color: AppColors.accent,
+                              borderRadius: BorderRadius.circular(7),
+                            ),
+                            alignment: Alignment.center,
+                            child: Text(
+                              unreadCount > 9 ? '9+' : '$unreadCount',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 8,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 16),
             ],
           ),
 
@@ -446,6 +481,67 @@ class _BannerCarouselState extends State<_BannerCarousel> {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ─── User Avatar Widget ───────────────────────────────────────────────────────
+
+class _UserAvatar extends StatelessWidget {
+  final String avatarUrl;
+  final String initials;
+
+  const _UserAvatar({required this.avatarUrl, required this.initials});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 44,
+      height: 44,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: AppColors.primaryGradient,
+        border: Border.all(color: AppColors.primary.withValues(alpha: 0.3), width: 2),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.2),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: ClipOval(
+        child: CachedNetworkImage(
+          imageUrl: avatarUrl,
+          fit: BoxFit.cover,
+          placeholder: (context, url) => Container(
+            color: AppColors.primaryLight,
+            alignment: Alignment.center,
+            child: Text(
+              initials,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Inter',
+              ),
+            ),
+          ),
+          errorWidget: (context, url, error) => Container(
+            color: AppColors.primaryLight,
+            alignment: Alignment.center,
+            child: Text(
+              initials,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Inter',
+              ),
+            ),
+          ),
         ),
       ),
     );
